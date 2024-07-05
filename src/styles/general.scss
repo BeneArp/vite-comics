@@ -9,8 +9,16 @@ img{
     max-width: 100%;
 }
 
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
 .container{
     width: 70%;
     margin: 0 auto;
-    padding: 1em;
+    padding: 0 1em;
 }
