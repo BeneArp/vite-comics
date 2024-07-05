@@ -61,7 +61,6 @@
 
     .container{
         @include flex;
-        padding: 0.5em;
 
         ul{
             width: 60%;
