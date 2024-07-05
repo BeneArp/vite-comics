@@ -55,12 +55,13 @@
     @use '../styles/partials/variables' as *;
     @use '../styles/partials/mixins' as *;
 
-    header{
-        // debug
-    }
 
     .container{
         @include flex;
+
+        img{
+            padding: 0.5em;
+        }
 
         ul{
             width: 60%;
@@ -73,9 +74,11 @@
                 }
 
             a{
+                display: inline-block;
                 color: $nav-a-color;
                 font-weight: $bold;
-                padding: 2.5em 0.5em;
+                height: 100%;
+                padding: 3.1em 0;
             }
             }
         }
