@@ -170,7 +170,7 @@
             }
 
             li{
-                margin-bottom: 0.4em;
+                margin-bottom: 0.8em;
 
                 a{
                     color: $footer-nav-color;
@@ -198,6 +198,7 @@
                     padding: 1.3em 1em;
                     border: 2px solid rgb(2 130 249);
                     cursor: pointer;
+                    font-weight: $bold;
                 }
 
                 #social{
@@ -206,6 +207,7 @@
 
                     h3{
                         color: rgb(2 130 249);
+                        font-weight: $bold;
                     }
                 }
             }
