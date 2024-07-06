@@ -68,6 +68,7 @@
             div{
                 // border: 2px solid black;
                 width: calc(100% / 5);
+                text-align: center;
 
                 img{
                     vertical-align: middle;

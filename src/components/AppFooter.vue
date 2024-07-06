@@ -182,7 +182,7 @@
             img{
                 position: absolute;
                 right: 20%;
-                top: -15%;
+                top: -5%;
             }
         }
 
