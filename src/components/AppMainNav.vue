@@ -1,6 +1,42 @@
 <script>
     export default {
         name: "AppMainNav",
+
+        data(){
+            return{
+                shopLinks:[
+                    {
+                        "text": "DIGITAL COMICS",
+                        "url": "#",
+                        "image": "../assets/images/buy-comics-digital-comics.png"
+                    },
+
+                    {
+                        "text": "DC MERCH",
+                        "url": "#",
+                        "image": "../assets/images/buy-comics-merchandise.png"
+                    },
+
+                    {
+                        "text": "SUBSCRIPTION",
+                        "url": "#",
+                        "image": "../assets/images/buy-comics-subscriptions.png"
+                    },
+
+                    {
+                        "text": "COMICS SCHOP LOCATOR",
+                        "url": "#",
+                        "image": "../assets/images/buy-comics-shop-locator.png"
+                    },
+
+                    {
+                        "text": "DC POWER VISA",
+                        "url": "#",
+                        "image": "../assets/images/buy-dc-power-visa.svg"
+                    },
+                ]
+            }
+        }
     }
 
 </script>
@@ -11,38 +47,10 @@
 
         <div class="container">
             
-            <div>
-                <a href="#">
-                    <img src="../assets/images/buy-comics-digital-comics.png" alt="">
-                    <span>DIGITAL COMICS</span>
-                </a>
-            </div>
-
-            <div>
-                <a href="#">
-                    <img src="../assets/images/buy-comics-merchandise.png" alt="">
-                    <span>DC MERCH</span>
-                </a>
-            </div>
-
-            <div>
-                <a href="#">
-                    <img src="../assets/images/buy-comics-subscriptions.png" alt="">
-                    <span>SUBSCRIPTION</span>
-                </a>
-            </div>
-
-            <div>
-                <a href="#">
-                    <img src="../assets/images/buy-comics-shop-locator.png" alt="">
-                    <span>COMICS SCHOP LOCATOR</span>
-                </a>
-            </div>
-
-            <div>
-                <a href="#">
-                    <img src="../assets/images/buy-dc-power-visa.svg" alt="">
-                    <span>DC POWER VISA</span>
+            <div v-for="shop in shopLinks">
+                <a :href="shop.url">
+                    <img src="../assets/images/buy-comics-digital-comics.png" :alt="shop.text">
+                    <span>{{shop.text}}</span>
                 </a>
             </div>
 

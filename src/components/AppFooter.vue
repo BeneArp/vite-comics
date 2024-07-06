@@ -142,31 +142,31 @@
                 socialLinks:[
                     {
                         "url": "#",
-                        "img": "../assets/images/footer-facebook.png",
+                        "image": "../assets/images/footer-facebook.png",
                         "alt": "Facebook Logo"
                     },
 
                     {
                         "url": "#",
-                        "img": "../assets/images/footer-twitter.png",
+                        "image": "../assets/images/footer-twitter.png",
                         "alt": "Twitter Logo"
                     },
 
                     {
                         "url": "#",
-                        "img": "../assets/images/footer-youtube.png",
+                        "image": "../assets/images/footer-youtube.png",
                         "alt": "YouTube Logo"
                     },
 
                     {
                         "url": "#",
-                        "img": "../assets/images/footer-pinterest.png",
+                        "image": "../assets/images/footer-pinterest.png",
                         "alt": "Pinterest Logo"
                     },
 
                     {
                         "url": "#",
-                        "img": "../assets/images/footer-periscope.png",
+                        "image": "../assets/images/footer-periscope.png",
                         "alt": "Periscope Logo"
                     },
                 ]
@@ -266,6 +266,7 @@
             @include flex;
             width: 30%;
             align-items: flex-start;
+            gap: 2em;
 
             h3{
                 margin: 0.8em 0;
@@ -285,7 +286,7 @@
             img{
                 position: absolute;
                 right: 20%;
-                top: -5%;
+                top: -2%;
             }
         }
 
