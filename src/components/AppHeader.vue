@@ -81,7 +81,7 @@
 
             <ul>
                 <li v-for="(link, index) in links">
-                    <a href="#" :class="link.current ? 'active' : '' ">{{link.text}}</a>
+                    <a :href="link.url" :class="link.current ? 'active' : '' ">{{link.text}}</a>
                 </li>
             </ul>
         </div>

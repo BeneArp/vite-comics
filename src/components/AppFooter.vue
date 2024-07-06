@@ -2,6 +2,176 @@
 
     export default {
         name: "AppFooter",
+
+        data(){
+            return{
+                comicsLinks:[
+                    {
+                        "text": "Charaters",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "Comics",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "Movies",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "TV",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "Games",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "Videos",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "News",
+                        "url": "#",
+                    },
+
+                ],
+
+                shopLinks:[
+                    {
+                        "text": "Shop DC",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "Shop DC Collectibles",
+                        "url": "#",
+                    },
+                ],
+
+                DcLinks:[
+                    {
+                        "text": "Terms Of Use",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "Privacy Policy (new)",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "Ad Choices",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "Advertising",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "Jobs",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "Subscriptions",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "Talent Workshops",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "CPSC Certificates",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "Ratingss",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "Shop Help",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "Contact Us",
+                        "url": "#",
+                    },
+                ],
+
+                SiteLinks:[
+                    {
+                        "text": "DC",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "MAD Magazine",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "DC Kids",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "DC Universe",
+                        "url": "#",
+                    },
+
+                    {
+                        "text": "DC Power Visa",
+                        "url": "#",
+                    },
+                ],
+
+                socialLinks:[
+                    {
+                        "url": "#",
+                        "img": "../assets/images/footer-facebook.png",
+                        "alt": "Facebook Logo"
+                    },
+
+                    {
+                        "url": "#",
+                        "img": "../assets/images/footer-twitter.png",
+                        "alt": "Twitter Logo"
+                    },
+
+                    {
+                        "url": "#",
+                        "img": "../assets/images/footer-youtube.png",
+                        "alt": "YouTube Logo"
+                    },
+
+                    {
+                        "url": "#",
+                        "img": "../assets/images/footer-pinterest.png",
+                        "alt": "Pinterest Logo"
+                    },
+
+                    {
+                        "url": "#",
+                        "img": "../assets/images/footer-periscope.png",
+                        "alt": "Periscope Logo"
+                    },
+                ]
+            }
+        }
     }
 
 </script>
@@ -18,36 +188,15 @@
 
                         <h3>DC COMICS</h3>
                         <ul>
-                            <li>
-                                <a href="#">Characters</a>
-                            </li>
-                            <li>
-                                <a href="#">Characters</a>
-                            </li>
-                            <li>
-                                <a href="#">Characters</a>
-                            </li>
-                            <li>
-                                <a href="#">Characters</a>
-                            </li>
-                            <li>
-                                <a href="#">Characters</a>
-                            </li>
-                            <li>
-                                <a href="#">Characters</a>
-                            </li>
-                            <li>
-                                <a href="#">Characters</a>
+                            <li v-for="link in comicsLinks">
+                                <a :href="link.url">{{link.text}}</a>
                             </li>
                         </ul>
 
                         <h3>SHOP</h3>
                         <ul>
-                            <li>
-                                <a href="#">Shop DC</a>
-                            </li>
-                            <li>
-                                <a href="#">Shop Collectibles</a>
+                            <li v-for="link in shopLinks">
+                                <a :href="link.url">{{link.text}}</a>
                             </li>
                         </ul>
 
@@ -57,38 +206,8 @@
 
                         <h3>DC</h3>
                         <ul>
-                            <li>
-                                <a href="#">Shop DC</a>
-                            </li>
-                            <li>
-                                <a href="#">Shop Collectibles</a>
-                            </li>
-                            <li>
-                                <a href="#">Shop Collectibles</a>
-                            </li>
-                            <li>
-                                <a href="#">Shop Collectibles</a>
-                            </li>
-                            <li>
-                                <a href="#">Shop Collectibles</a>
-                            </li>
-                            <li>
-                                <a href="#">Shop Collectibles</a>
-                            </li>
-                            <li>
-                                <a href="#">Shop Collectibles</a>
-                            </li>
-                            <li>
-                                <a href="#">Shop Collectibles</a>
-                            </li>
-                            <li>
-                                <a href="#">Shop Collectibles</a>
-                            </li>
-                            <li>
-                                <a href="#">Shop Collectibles</a>
-                            </li>
-                            <li>
-                                <a href="#">Shop Collectibles</a>
+                            <li v-for="link in DcLinks">
+                                <a :href="link.url">{{link.text}}</a>
                             </li>
                         </ul>
 
@@ -97,20 +216,8 @@
                         <div>
                             <h3>SITES</h3>
                             <ul>
-                                <li>
-                                    <a href="#">Shop DC</a>
-                                </li>
-                                <li>
-                                    <a href="#">Shop Collectibles</a>
-                                </li>
-                                <li>
-                                    <a href="#">Shop Collectibles</a>
-                                </li>
-                                <li>
-                                    <a href="#">Shop Collectibles</a>
-                                </li>
-                                <li>
-                                    <a href="#">Shop Collectibles</a>
+                                <li v-for="link in SiteLinks">
+                                    <a :href="link.url">{{link.text}}</a>
                                 </li>
                             </ul>
                         </div>
@@ -131,11 +238,7 @@
 
                 <div id="social">
                     <h3>FOLLOW US</h3>
-                    <a href="#"><img src="../assets/images/footer-facebook.png" alt=""></a>
-                    <a href="#"><img src="../assets/images/footer-twitter.png" alt=""></a>
-                    <a href="#"><img src="../assets/images/footer-youtube.png" alt=""></a>
-                    <a href="#"><img src="../assets/images/footer-pinterest.png" alt=""></a>
-                    <a href="#"><img src="../assets/images/footer-periscope.png" alt=""></a>
+                    <a :href="social.url" v-for="social in socialLinks"><img src="../assets/images/footer-facebook.png" :alt="social.alt"></a>
                 </div>
 
             </div>
