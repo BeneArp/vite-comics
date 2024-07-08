@@ -1,10 +1,12 @@
 <script>
     import AppMainNav from '../components/AppMainNav.vue'
+    import Cards from './Cards.vue';
 
     export default {
         name: "AppMainContent",
         components: {
             AppMainNav,
+            Cards,
         }
     }
 
@@ -15,7 +17,7 @@
     <section id="main">
 
         <div class="container">
-            <h1>--> Content here <--</h1>
+            <Cards/>
         </div>
 
     </section>
@@ -30,12 +32,12 @@
 
     #main{
         background-color: $main-background;
-        padding: 3em;
+        padding: 5em;
 
-        h1{
-            font-size: 30px;
-            font-weight: $bold;
-            color: white;
+        .container{
+            @include flex;
+            flex-wrap: wrap;
+            gap: 0.8em;
         }
     }
 
