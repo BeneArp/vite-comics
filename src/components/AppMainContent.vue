@@ -96,8 +96,16 @@
 
     <section id="main">
 
+        <div class="label top">
+            <h2>CURRENT SERIES</h2>
+        </div>
+
         <div class="container">
             <Cards :menuItems="infoComics"/>
+        </div>
+
+        <div class="label center">
+            <h4>LOAD MORE</h4>
         </div>
 
     </section>
@@ -113,12 +121,33 @@
     #main{
         background-color: $main-background;
         padding: 5em;
+        position: relative;
 
         .container{
             @include flex;
             flex-wrap: wrap;
             gap: 0.8em;
             align-items: flex-start;
+        }
+
+        .label{
+            display: inline-block;
+            background-color: $main-nav-background;
+            color: white;
+            padding: 0.8em 1.5em;
+            position: absolute;
+            cursor: default;
+        }
+
+        .top{
+            top: -3%;
+            left: 22%;
+        }
+
+        .center{
+            left: 50%;
+            transform: translate(-50%);
+            cursor: pointer;
         }
     }
 

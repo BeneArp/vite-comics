@@ -30,6 +30,7 @@
     .card{
         margin: 2em 0;
         width: 15%;
+        cursor: pointer;
         // debug
 
         .cover{
