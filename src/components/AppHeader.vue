@@ -105,6 +105,7 @@
         ul{
             width: 60%;
             @include flex;
+            gap: 2em;
 
             li{
                 :hover{

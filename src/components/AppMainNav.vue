@@ -36,6 +36,12 @@
                     },
                 ]
             }
+        },
+
+        methods:{
+            getImagePath: function(imgPath){
+                return new URL(imgPath, import.meta.url).href;
+            }
         }
     }
 
@@ -49,7 +55,7 @@
             
             <div v-for="shop in shopLinks">
                 <a :href="shop.url">
-                    <img src="../assets/images/buy-comics-digital-comics.png" :alt="shop.text">
+                    <img :src="getImagePath(`../assets/${shop.image}`)" :alt="shop.text">
                     <span>{{shop.text}}</span>
                 </a>
             </div>

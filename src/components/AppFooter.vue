@@ -171,6 +171,12 @@
                     },
                 ]
             }
+        },
+
+        methods:{
+            getImagePath: function(imgPath){
+                return new URL(imgPath, import.meta.url).href;
+            }
         }
     }
 
@@ -238,7 +244,7 @@
 
                 <div id="social">
                     <h3>FOLLOW US</h3>
-                    <a :href="social.url" v-for="social in socialLinks"><img src="../assets/images/footer-facebook.png" :alt="social.alt"></a>
+                    <a :href="social.url" v-for="social in socialLinks"><img :src="getImagePath(`../assets/${social.image}`)" :alt="social.alt"></a>
                 </div>
 
             </div>
@@ -264,9 +270,10 @@
 
             nav{
             @include flex;
-            width: 30%;
+            width: 50%;
             align-items: flex-start;
-            gap: 2em;
+            justify-content: flex-start;
+            gap: 4em;
 
             h3{
                 margin: 0.8em 0;
